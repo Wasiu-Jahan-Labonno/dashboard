@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+
+    <script>
+window.onload = function () {
+
+var chart1 = new CanvasJS.Chart("chartContainer", {
+	theme: "light2",
+	animationEnabled: true,
+    
+	subtitles: [{
+		text: "country",
+		fontSize: 15
+	}],
+	data: [{
+		type: "pie",
+		indexLabelFontSize: 18,
+		radius: 80,
+		indexLabel: "{label} - {y}",
+		yValueFormatString: "###0.0\"%\"",
+		click: explodePie,
+		dataPoints: [
+			{ y: 42, label: "Gas" },
+			{ y: 21, label: "Nuclear"},
+			{ y: 24.5, label: "Renewable" },
+			{ y: 9, label: "Coal" },
+			{ y: 3.1, label: "Other Fuels" }
+		]
+	}]
+});
+chart1.render();
+
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	theme: "dark",
+	animationEnabled: true,
+	subtitles: [{
+		text: "country",
+		fontSize: 15
+	}],
+	data: [{
+		type: "pie",
+		indexLabelFontSize: 18,
+		radius: 80,
+		indexLabel: "{label} - {y}",
+		yValueFormatString: "###0.0\"%\"",
+		click: explodePie,
+		dataPoints: [
+			{ y: 42, label: "Gas" },
+			{ y: 21, label: "Nuclear"},
+			{ y: 24.5, label: "Renewable" },
+			{ y: 9, label: "Coal" },
+			{ y: 3.1, label: "Other Fuels" }
+		]
+	}]
+});
+chart2.render();
+
+function explodePie(e) {
+	for(var i = 0; i < e.dataSeries.dataPoints.length; i++) {
+		if(i !== e.dataPointIndex)
+			e.dataSeries.dataPoints[i].exploded = false;
+	}
+}
+ 
+}
+        </script>
+</head>
+<body>
+    <div class="body">
+         <div class="row m-0">
+            <div class="col-2">
+                <div class="icon-bar">
+                    <div class="pictecin">
+                      <h3 class="heading"><img  style="padding-right:20px ;" src="image/oleaon.png">Oleaon </h3></div>
+                    <a class="active textadec" href="#"><i style="padding-right:20px; padding-left:8px ;" class="fa fa-home"></i> Dashboard</a> 
+                    <a class="textadec" href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-calculator"></i> Accounting dashboard</a> 
+                    <a class="textadec" href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-tasks"></i> Task dashboard</a> 
+                    <a class="textadec" href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-project-diagram"></i> Project manager dashboard</a>
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-arrow-down"></i>more</a> <hr>
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-file-alt"></i>more</a> 
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-file-alt"></i>more</a> 
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-file-alt"></i>more</a> 
+                
+                    <a  class="textadec "href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-file-alt"></i>more</a> <hr> 
+  
+                    
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class=" fas fa-chevron-right fas fa-file-alt"></i>more</a> 
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-store"></i>more</a> 
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-file-alt"></i>more</a> 
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-file-alt"></i>more</a> 
+                    <a  class="textadec"href="#"><i style="padding-right:20px;  padding-left:8px ; " class="fas fa-file-alt"></i>more</a> 
+
+                    <div class="fixed-bottom">
+                        <p class="text-center text-light"> <i class="text-light fas fa-cog px-2"></i>powered by labonno</p>
+                    </div>
+                  
+                  </div>
+                 
+            </div>
+
+
+            <div class="col-10">
+                <div class="row p-4">
+                    <div class="col-3">
+                        <div class="input-group rounded mb-3" >
+                            <input type="text" class="form-control rounded " placeholder="search" >
+                            <button class="btn btnmy active2" ><i class="fas fa-search"></i></button>
+                          </div>
+                    </div>
+                       
+                <div class="col-5"></div>
+                    <div class="col-4">
+                        <div class="iconehead px-1">
+                   <a  href="#"><i class="fas textadec1 fa-cog " style="border-radius: 50%;" ></i></a> 
+                     </div>
+
+                         <div class="iconehead px-1">
+                            <a  href="#"><i class="fas textadec1  fas fa-store" style="border-radius: 50%;"></i></a> 
+                                </div> 
+
+
+                        <div class="iconehead px-1">
+                         <a  href="#"><i class=" textadec1 fas fa-check-circle" style="border-radius: 50%;"></i></a> 
+                            </div> 
+                      
+                        <div class="iconehead px-1 mar">
+                            <a  href="#"><i class="textadec1 fas fa-bell" style="border-radius: 50%;"></i></a> 
+                               <div class="dot">
+                                   <p class="text-center text-light" >12</p>
+                               </div>
+                                </div> 
+                               
+                        <div class="iconehead px-1 ">
+                            <a  href="#"><i class="textadec1  fas fa-info-circle" style="border-radius: 50%;"></i></a> 
+                            <div class="dot1">
+                                <p class="text-center text-light">16</p>
+                            </div>
+                                </div> 
+                              
+                          <div class="iconehead px-1 mt-2">
+                            <div class="dropdown ">
+                                <button class="dropbtn">
+                                
+                                  <a class="textdecpic" style="border-radius: 40%;" href="#"><img  src="image/icone-removebg-preview.png" class="pb-2" > <i class="fas fa-caret-down rounded-circle"></i></a> 
+                                </button>
+                                  <div class="dropdown-content">
+                                    <a href="#">HOME</a>
+                                    <a href="#">LOG IN</a>
+                                    <a href="#">LOG OUT</a>
+                                    </div>
+                                  </div>
+                                
+                                </div> 
+
+                    
+
+
+                    </div>
+                
+
+                </div>
+       
+                 <div class="row m-0">
+                    <div class="col-4">
+               <h3><b>Accounting dashboard</b></h3>
+                   </div>
+            <div class="col-4"></div>
+            <div class="col-4 ">
+                <a class="textadec " href="#"><i style="padding-right:10px ;"class="fas fa-plus"></i>Add Dashlet</a>
+         
+            
+                <button type="button" style="border-radius:25px" class="btn btn-primary mx-3 ">Update dashnoard</button>
+            </div>
+
+    
+
+                </div>
+           
+               <div class="row m-0">
+                    <div class="col-my p-2">
+                        <div class="smallbox p-3">
+                            <a  href="#"><i class="fas fa-box  textadec4 " style="border-radius: 50%;"></i></a> 
+                            <button type="button" style="border-radius:25px" class="btn btn-light  px-2 py-0 siz13">DRAFT</button>
+                            <p style="padding: 5px;">Doctor appoimtment</p>
+                        </div>
+                    </div>
+
+                    <div class="col-my p-2">
+                        <div class="smallbox p-3">
+                            <a  href="#"><i class="fas fa-user-friends textadec2" style="border-radius: 50%;"></i></a> 
+                            <button type="button" style="border-radius:25px" class="btn btn-light  px-2 py-0 siz13">DRAFT</button>
+                            <p style="padding: 5px;">Doctor appoimtment</p>
+                        </div>
+                    </div>
+
+                    <div class="col-my p-2">
+                        <div class="smallbox p-3">
+                            <a  href="#"><i class="far fa-user-circle textadec3"style="border-radius: 50%;"></i></a> 
+                            <button type="button" style="border-radius:25px" class="btn btn-light  px-2 py-0 siz13">DRAFT</button>
+                            <p style="padding: 5px;">Doctor appoimtment</p>
+                        </div>
+                    </div>
+
+                    <div class="col-my p-2">
+                        <div class="smallbox p-3">
+                            <a  href="#"><i class="fas fa-walking textadec5" style="border-radius: 50%;"></i></a> 
+                            <button type="button" style="border-radius:25px" class="btn btn-light px-2 py-0 siz13">DRAFT</button>
+                            <p style="padding: 5px;">Doctor appoimtment</p>
+                        </div>
+                    </div>
+
+                    <div class="col-my p-2">
+                        <div class="smallbox p-3">
+                            <a  href="#"><i class="fas fa-walking textadec5" style="border-radius: 50%;"></i></a> 
+                            <button type="button" style="border-radius:25px" class="btn btn-light  px-2 py-0 siz13">DRAFT</button>
+                            <p style="padding: 5px;">Doctor appoimtment</p>
+                        </div>
+                    </div>
+               </div>
+
+           <div class="row m-0">
+              <div class="col-5">
+                <div class="smallbox p-3">
+                    <a  href="#"><i class="fas fa-user-friends textadec2" style="border-radius: 50%;"></i></a> 
+                    <button type="button" style="border-radius:25px" class="btn btn-light  px-2 py-0 siz13">DRAFT</button>
+                    <p style="padding: 5px;">Doctor appoimtment Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas eius nostrum odio beatae cumque rem accusamus sint minima, deleniti, molestias reiciendis dolorum veniam maiores repudiandae ut facilis ullam quia nam.</p>
+                  
+                
+                
+                </div>
+              </div>
+
+              <div class="col-5">
+                <div class="smallbox p-3">
+                    <a  href="#"><i class="fas textadecle fas fa-share-square " style="border-radius: 50%;"></i></a> 
+                    <button type="button" style="border-radius:25px" class="btn btn-light  px-2 py-0 siz13">DRAFT</button>
+                    <p style="padding: 5px;">Doctor appoimtment</p>
+
+                    <div class="row no-gutters">
+
+                        <div class="col-6">  <div id="chartContainer" style="height: 370px; width: 100%;"></div></div>
+                        <div class="col-6"> <div id="chartContainer2" style="height: 370px; width: 100%;"></div></div>
+                   
+                </div>
+                
+
+                </div>
+              </div>
+
+             
+
+              <div class="col-2 m-0">
+                   <div class="row m-0">
+                      <div class="col-6 " style=" border-right: #bdb4b4 2px dotted;">
+                        <div class="partbox1 px-4 m-1">
+                            <h2>4</h2>
+                         </div>
+                       </div>
+                     
+
+                       <div class="col-6 m-0">
+                        <div class="partbox2 px-4 m-1">
+                          
+                         </div>
+                       </div>
+
+                       <div class="col-12 m-0">
+                        <div class="partbox3 px-4 m-1">
+                            <h4>20</h4>
+                            <p>dashboard</p>
+                         </div>
+                       </div>
+
+               
+               </div>
+            </div>
+
+
+
+   </div>
+       
+
+
+
+
+ <div class="row m-0">
+    <div class="col-3 p-3">
+        <h4>Task name</h4>
+    </div>
+    <div class="col-2 m-3">    
+        <h4 style="float: right;">Status</h4>
+    </div>   
+    <div class="col-2 m-2 mt-3 ">
+        <h4 class="text-center">Due By</h4>
+    </div>    
+    <div class="col-2 m-2  mt-3">
+        <h4 style="float: right;">App/Workshop</h4>
+    </div>
+    <div class="col-2 m-2  mt-3">   
+        <h4 class="text-center">TAGs</h4>
+    </div>    
+    
+</div>
+
+<div class="row  bg-p my-1">
+    <div class="col-4 floatri longbox p-3">
+        <p>Fill and submit your name</p>
+        <a class="fedtext" href="#"><img src="image/pic1.jpg" style="border-radius: 50%;"></i> wasiu jahan labono is the best</a> 
+    </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btn-primary  px-2 py-1 siz13">OPEN</button>
+
+    </div>
+
+    <div class="col-1 floatri p-3">
+        <p class="fedtext ">dec.21.2001</p>
+     </div>
+
+
+    <div class="col-3 floatri p-3 px-5">
+     
+        <a  href="#"><i class="fas fa-walking textadec5" style="border-radius: 50%;"></i></a> <B>leave managment </B> <p style="margin-left: 30px;">HR</p>
+     </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour px-2 py-1 siz13">DOCTOR</button>
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour px-2 py-1 siz13">APP</button>
+    </div>
+
+</div>
+
+<div class="row  bg-p my-1">
+    <div class="col-4 floatri longbox p-3">
+        <p>Fill and submit your name</p>
+        <a class="fedtext" href="#"><img src="image/pic2.jpg" style="border-radius: 50%;"></i> wasiu jahan labono is the best</a> 
+    </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btn-danger px-2 py-1 siz13 rounded1">overview</button>
+
+    </div>
+
+    <div class="col-1 floatri p-3">
+        <p class="fedtext ">dec.21.2001</p>
+     </div>
+
+
+    <div class="col-3 floatri p-3 px-5">
+     
+        <a class="fedtext" href="#">  <a  href="#"><i class="fas fa-user-friends textadec2" style="border-radius: 50%;"></i></a>  <B>manage order </B> <p style="margin-left: 30px;">sales</p>
+     </div>
+
+   
+     <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour px-2 py-1 siz13">DOCTOR</button>
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour px-2 py-1 siz13">APP</button>
+    </div>
+
+</div>
+
+
+<div class="row  bg-p my-1">
+    <div class="col-4 floatri longbox p-3">
+        <p>Fill and submit your name</p>
+        <a class="fedtext" href="#"><img src="image/pic4.jpg" style="border-radius: 50%;" > jahan labono is the best</a> 
+    </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btn-primary  px-2 py-1 siz13">OPEN</button>
+
+    </div>
+
+    <div class="col-1 floatri p-3">
+        <p class="fedtext ">dec.21.2001</p>
+     </div>
+
+
+    <div class="col-3 floatri p-3 px-5">
+     
+        <a  href="#"><i class="far fa-user-circle textadec3"style="border-radius: 50%;"></i></a>  <B>manage request </B> <p style="margin-left: 30px;">sales</p>
+     </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour  px-2 py-1 siz13">CLINT</button>
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour  px-2 py-1 siz13">APP</button>
+    </div>
+
+</div>
+
+
+
+<div class="row  bg-p my-1">
+    <div class="col-4 floatri longbox p-3">
+        <p>Fill and submit your name</p>
+        <a class="fedtext" href="#"><img src="image/pic4.jpg" style="border-radius: 50%;" > wasiu jahan labono is the best</a> 
+    </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btn-primary  px-2 py-1 siz13">OPEN</button>
+
+    </div>
+
+    <div class="col-1 floatri p-3">
+        <p class="fedtext ">dec.21.2001</p>
+     </div>
+
+
+    <div class="col-3 floatri p-3 px-5">
+     
+        <a  href="#"><i class="fas fa-walking textadec5" style="border-radius: 50%;"></i></a> <B>leave managment </B> <p style="margin-left: 30px;">HR</p>
+     </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour px-2 py-1 siz13">DOCTOR</button>
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour  px-2 py-1 siz13">APP</button>
+    </div>
+
+</div>
+
+
+<div class="row  bg-p my-1">
+    <div class="col-4 floatri longbox p-3">
+        <p>Fill and submit your name</p>
+        <a class="fedtext" href="#"><img src="image/pic4.jpg" style="border-radius: 50%;" > wasiu jahan labono is the best</a> 
+    </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btn-primary px-2 py-1 siz13">OPEN</button>
+
+    </div>
+
+    <div class="col-1 floatri p-3">
+        <p class="fedtext ">dec.21.2001</p>
+     </div>
+
+
+    <div class="col-3 floatri p-3 px-5">
+        
+        <a  href="#"><i class="fas fa-walking textadec5" style="border-radius: 50%;"></i></a> <B>Leave managment </B> <p style="margin-left: 30px;">HR</p> 
+     </div>
+
+    <div class="col-2 floatri px-5 py-4">
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour  px-1 py-1 siz13">DOCTOR</button>
+        <button type="button" style="border-radius:25px float-right" class="btn btncolour  px-1 py-1 siz13">OPEN</button>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+    </div>
+    <script src="canvas.js"></script>
+</body>
+</html>
